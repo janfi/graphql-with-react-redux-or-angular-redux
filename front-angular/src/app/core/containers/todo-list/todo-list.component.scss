@@ -1,0 +1,29 @@
+.todo-list-wrapper {
+    min-width: 650px;
+    max-width: 45%;
+    background-color: #fff;
+    margin: 60px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.todolist-title {
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.error {
+    color:red;
+    padding:10px;
+}
+
+.segment {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+    margin: 1rem 0;
+    padding: 1em 1em;
+    border-radius: .28571429rem;
+    border: 1px solid rgba(34,36,38,.15);
+}

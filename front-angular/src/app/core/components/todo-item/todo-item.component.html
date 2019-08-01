@@ -1,0 +1,8 @@
+<div class="todo-item" [ngClass]="{'completed':todo.completed}">
+    <div class="todo-text" [ngClass]="{'completed':todo.completed}">{{todo.text}}</div>
+    <div class="todo-timestamp">
+        {{todo.completed ? todo.completedAt: ''}}
+    </div>
+    <a class="button" [ngClass]="{'is-success':!todo.completed, 'is-info':todo.completed}" (click)="todoUpdate(todo)">{{todo.completed ? 'UNDO':'DONE'}}</a>
+    <a class="button is-danger is-outlined" (click)="todoDelete(todo.id)">DELETE</a>
+</div>

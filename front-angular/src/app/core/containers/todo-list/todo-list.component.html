@@ -1,0 +1,33 @@
+<div class="todo-list-wrapper">
+    <div class="todolist-title">Liste des todos</div>
+    <div class="field has-addons">
+        <div class="control">
+          <input #textTodo class="input" type="text" placeholder="Add Todos" [value]="textInput" (input)="textInput = textTodo.value" (keyup.enter)="todoAdd()">
+        </div>
+        <a class="button is-info" (click)="todoAdd()">
+            <span class="icon is-small is-left">
+                <fa-icon [icon]="faPlus"></fa-icon>
+            </span>
+        </a>
+    </div>
+    <ng-container *ngIf="error$ | async; else noError">
+        <div class="error">
+            {{error$ | async}}
+        </div>
+    </ng-container>
+    <ng-template #noError>
+        <ng-container *ngIf="loading$ | async; else loaded">
+            <progress class="progress is-info" max="100">100%</progress>
+        </ng-container>
+    </ng-template>
+    <ng-template #loaded>
+        <div class="segment">
+            <app-todo-item *ngFor="let todo of todos$ | async" 
+            [todo]="todo" 
+            (update)="todoUpdate($event)"
+            (delete)="todoDelete($event)"
+            >
+             </app-todo-item>
+        </div>
+    </ng-template>
+</div>

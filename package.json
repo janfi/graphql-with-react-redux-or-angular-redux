@@ -1,0 +1,24 @@
+{
+  "name": "poc-graphql-with-react-redux-or-angular-redux",
+  "version": "0.0.1",
+  "description": "poc graphql with react or angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-backend": "cd backend && npm install",
+    "start-backend": "cd backend && npm run start-backend",
+    "install-frontend-react": "cd front-react && npm install",
+    "start-frontend-react": "cd front-react && npm run start",
+    "install-frontend-angular": "cd front-angular && npm install",
+    "start-frontend-angular": "cd front-angular && npm run start",
+    "start-install": "concurrently \"install-backend\" \"install-frontend-react\"",
+    "start-react": "concurrently \"BROWSER=none npm run start-backend\" \"wait-on http://localhost:8080 && npm run start-frontend-react\"",
+    "start-angular": "concurrently \"BROWSER=none npm run start-backend\" \"wait-on http://localhost:8080 && npm run start-frontend-angular\""
+  },
+  "author": "jphiboris@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "wait-on": "^3.3.0"
+  }
+}
