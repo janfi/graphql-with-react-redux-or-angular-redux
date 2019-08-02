@@ -11,8 +11,9 @@
     "start-frontend-react": "cd front-react && npm run start",
     "install-frontend-angular": "cd front-angular && npm install",
     "start-frontend-angular": "cd front-angular && npm run start",
-    "start-install": "concurrently \"install-backend\" \"install-frontend-react\"",
+    "start-install-react": "concurrently \"install-backend\" \"install-frontend-react\"",
     "start-react": "concurrently \"BROWSER=none npm run start-backend\" \"wait-on http://localhost:8080 && npm run start-frontend-react\"",
+    "start-install-angular": "concurrently \"install-backend\" \"install-frontend-react\"",
     "start-angular": "concurrently \"BROWSER=none npm run start-backend\" \"wait-on http://localhost:8080 && npm run start-frontend-angular\""
   },
   "author": "jphiboris@gmail.com",
