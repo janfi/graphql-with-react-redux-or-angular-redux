@@ -16,13 +16,6 @@ npm run start-install-angular
 npm run start-angular
 ```
 
-## with react/redux
-
-```node
-npm run start-install-react
-npm run start-react
-```
-
 ## manually
 
 you can run backend and frontend individually
