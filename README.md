@@ -9,6 +9,14 @@ npm run start-install-react
 npm run start-react
 ```
 
+## with react/redux and react-hooks
+
+```node
+npm run start-install-react-hooks
+npm run start-react-hooks
+```
+
+
 ## with angular-redux
 
 ```node
@@ -30,6 +38,12 @@ frontend react
 ```node
 npm run install-frontend-react
 npm run start-react
+```
+
+frontend react with hooks
+```node
+npm run install-frontend-react-hooks
+npm run start-react-hooks
 ```
 
 frontend angular
